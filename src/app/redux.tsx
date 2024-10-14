@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import { useRef } from "react";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import {
@@ -24,22 +22,26 @@ import {
 } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
-/* eslint-disable @typescript-eslint/no-explicit-any */
-const fetchData = (): any => {
-  return { /* some data */ };
+
+// Define a specific return type for fetchData
+interface Data {
+  // Define the structure of your data here
+}
+
+const fetchData = (): Data => {
+  return { /* some data */ }; // Replace with actual data structure
 };
-/* eslint-enable @typescript-eslint/no-explicit-any */
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {
   return {
-    getItem(_key: any) {
+    getItem(_key: string) {
       return Promise.resolve(null);
     },
-    setItem(_key: any, value: any) {
+    setItem(_key: string, value: unknown) {
       return Promise.resolve(value);
     },
-    removeItem(_key: any) {
+    removeItem(_key: string) {
       return Promise.resolve();
     },
   };
@@ -55,10 +57,12 @@ const persistConfig = {
   storage,
   whitelist: ["global"],
 };
+
 const rootReducer = combineReducers({
   global: globalReducer,
   [api.reducerPath]: api.reducer,
 });
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 /* REDUX STORE */
@@ -88,10 +92,12 @@ export default function StoreProvider({
   children: React.ReactNode;
 }) {
   const storeRef = useRef<AppStore>();
+  
   if (!storeRef.current) {
     storeRef.current = makeStore();
     setupListeners(storeRef.current.dispatch);
   }
+  
   const persistor = persistStore(storeRef.current);
 
   return (
