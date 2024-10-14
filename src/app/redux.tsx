@@ -28,9 +28,10 @@ interface Data {
   // Define the structure of your data here
 }
 
-const fetchData = (): Data => {
-  return { /* some data */ }; // Replace with actual data structure
-};
+// If fetchData is not used, you can remove it or use it in your code.
+// const fetchData = (): Data => {
+//   return { /* some data */ }; // Replace with actual data structure
+// };
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {
