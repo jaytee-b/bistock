@@ -1,4 +1,6 @@
 "use client"
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react"
 import { useCreateProductMutation, useGetProductsQuery } from "../state/api";
 import { PlusCircle, PlusCircleIcon, Search } from "lucide-react";

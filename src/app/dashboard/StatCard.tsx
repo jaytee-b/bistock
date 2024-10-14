@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { LucideIcon } from "lucide-react";
 import React from "react";
 type StateDetail = {

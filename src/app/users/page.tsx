@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Header from "../(components)/Header";

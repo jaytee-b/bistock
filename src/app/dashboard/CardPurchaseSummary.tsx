@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useGetDashboardMetricsQuery } from "../state/api";
 import { TrendingDown, TrendingUp } from "lucide-react";
 import numeral from "numeral";

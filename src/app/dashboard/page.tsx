@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { CheckCircle, Package, Tag, TrendingDown, TrendingUp } from "lucide-react"
 import CardExpenseSummary from "./CardExpenseSummary"

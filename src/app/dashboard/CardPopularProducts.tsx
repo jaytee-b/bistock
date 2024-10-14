@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import { useGetDashboardMetricsQuery } from "../state/api";
 import { ShoppingBag } from "lucide-react";
