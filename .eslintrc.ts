@@ -18,6 +18,7 @@ const config: Linter.Config = {
         // Customize your client-side linting rules here
         'react/react-in-jsx-scope': 'off', // Not needed with React 17+
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        "@typescript-eslint/no-explicit-any": "off"
     },
     settings: {
         react: {

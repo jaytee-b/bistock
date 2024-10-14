@@ -24,6 +24,11 @@ import {
 } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const fetchData = (): any => {
+  return { /* some data */ };
+};
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsDarkMode, setIsSidebarCollapsed } from "@/app/state";
 
-type Props = {};
+
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
