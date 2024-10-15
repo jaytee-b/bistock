@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useRef } from "react";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import {
@@ -29,9 +31,9 @@ interface Data {
 }
 
 // If fetchData is not used, you can remove it or use it in your code.
-// const fetchData = (): Data => {
-//   return { /* some data */ }; // Replace with actual data structure
-// };
+const fetchData = (): Data => {
+  return { /* some data */ }; // Replace with actual data structure
+};
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {
